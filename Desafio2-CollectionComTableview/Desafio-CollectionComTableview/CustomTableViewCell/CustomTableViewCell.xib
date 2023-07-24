@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="272" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="Desafio_CollectionComTableview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="554" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="554" height="272"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72V-tc-pRh">
+                        <rect key="frame" x="12" y="12" width="530" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pn4-pk-tkA">
+                        <rect key="frame" x="0.0" y="45" width="554" height="227"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9bn-JD-Jbi">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="pn4-pk-tkA" secondAttribute="bottom" id="6UR-3d-0GN"/>
+                    <constraint firstItem="pn4-pk-tkA" firstAttribute="top" secondItem="72V-tc-pRh" secondAttribute="bottom" constant="12" id="8Cf-z8-lxC"/>
+                    <constraint firstItem="72V-tc-pRh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="8JR-ki-3O1"/>
+                    <constraint firstItem="pn4-pk-tkA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q13-tV-Amp"/>
+                    <constraint firstAttribute="trailing" secondItem="72V-tc-pRh" secondAttribute="trailing" constant="12" id="vKE-wE-GnI"/>
+                    <constraint firstItem="72V-tc-pRh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="wMA-d1-h2Q"/>
+                    <constraint firstAttribute="trailing" secondItem="pn4-pk-tkA" secondAttribute="trailing" id="xuF-Rx-A6N"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="colletionView" destination="pn4-pk-tkA" id="CQg-QT-FG1"/>
+                <outlet property="titleLabel" destination="72V-tc-pRh" id="UE5-ZE-g35"/>
+            </connections>
+            <point key="canvasLocation" x="308.39694656488547" y="69.014084507042256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

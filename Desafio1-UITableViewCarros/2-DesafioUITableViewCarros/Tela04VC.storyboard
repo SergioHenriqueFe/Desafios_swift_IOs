@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22113.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tela04VC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Tela04VC" id="Y6W-OH-hqX" customClass="Tela04VC" customModule="__DesafioUITableViewCarros" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TNK-fB-sq6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="259"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jaguar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u6-5z-NeX">
+                                <rect key="frame" x="20" y="338" width="353" height="130"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="50"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TNK-fB-sq6" secondAttribute="trailing" id="9Do-7N-eFx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1u6-5z-NeX" secondAttribute="bottom" constant="350" id="K9P-em-nGq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1u6-5z-NeX" secondAttribute="trailing" constant="20" id="KJT-ME-ox2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="TNK-fB-sq6" secondAttribute="bottom" constant="500" id="ecS-T9-Qjy"/>
+                            <constraint firstItem="TNK-fB-sq6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ezY-w8-g7y"/>
+                            <constraint firstItem="1u6-5z-NeX" firstAttribute="top" secondItem="TNK-fB-sq6" secondAttribute="bottom" constant="20" id="mIo-Qm-cbg"/>
+                            <constraint firstItem="TNK-fB-sq6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="yMG-Oy-dLT"/>
+                            <constraint firstItem="1u6-5z-NeX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="zkU-Ue-hXh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="JaguarImage" destination="TNK-fB-sq6" id="1wH-WM-Xjd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
