@@ -17,6 +17,7 @@ class UserPerfil: UIViewController {
     
     var listBrand :[String] = ["Habilidades","Cursos","Ferramentas"]
     var listImage :[String] = ["habilidades","cursos","ferramentas"]
+    
     var name :String?
     init?(coder:NSCoder, name:String){
         self.name = name
