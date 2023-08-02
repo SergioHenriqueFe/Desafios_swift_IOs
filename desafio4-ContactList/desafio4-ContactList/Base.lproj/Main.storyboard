@@ -32,12 +32,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wu1-sy-EmM">
-                                <rect key="frame" x="50" y="109" width="293" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="uPd-h1-GIn"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG3-Dp-DdN">
                                 <rect key="frame" x="159" y="279" width="75" height="40"/>
                                 <constraints>
@@ -71,15 +65,24 @@
                                 <rect key="frame" x="0.0" y="502" width="393" height="267"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wu1-sy-EmM">
+                                <rect key="frame" x="121.66666666666669" y="110.33333333333333" width="150" height="147.33333333333331"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bEH-xu-NkC"/>
+                                    <constraint firstAttribute="height" constant="150" id="uPd-h1-GIn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B6D-jB-0qn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wu1-sy-EmM" firstAttribute="leading" secondItem="B6D-jB-0qn" secondAttribute="leading" constant="50" id="36x-xg-nAN"/>
                             <constraint firstItem="eG3-Dp-DdN" firstAttribute="centerX" secondItem="71T-Xi-SS8" secondAttribute="centerX" id="3yK-6h-hyE"/>
                             <constraint firstItem="8te-Cc-NTh" firstAttribute="trailing" secondItem="HrF-ln-5EK" secondAttribute="trailing" id="ApP-xA-AO2"/>
                             <constraint firstItem="eG3-Dp-DdN" firstAttribute="top" secondItem="Wu1-sy-EmM" secondAttribute="bottom" constant="20" id="C2T-3q-og4"/>
                             <constraint firstItem="8te-Cc-NTh" firstAttribute="leading" secondItem="HrF-ln-5EK" secondAttribute="leading" id="DMx-0L-57u"/>
+                            <constraint firstItem="Wu1-sy-EmM" firstAttribute="centerX" secondItem="71T-Xi-SS8" secondAttribute="centerX" id="DOx-ZO-vK4"/>
                             <constraint firstItem="B6D-jB-0qn" firstAttribute="trailing" secondItem="HrF-ln-5EK" secondAttribute="trailing" constant="20" id="EXT-TS-nB2"/>
                             <constraint firstItem="PoK-CE-Ilk" firstAttribute="top" secondItem="q3Y-2c-joQ" secondAttribute="bottom" constant="20" id="Gcj-GG-xsI"/>
                             <constraint firstItem="HrF-ln-5EK" firstAttribute="leading" secondItem="B6D-jB-0qn" secondAttribute="leading" constant="20" id="Kxq-tF-7Ie"/>
@@ -88,12 +91,10 @@
                             <constraint firstItem="q3Y-2c-joQ" firstAttribute="trailing" secondItem="eG3-Dp-DdN" secondAttribute="trailing" id="Xju-UV-hJ9"/>
                             <constraint firstItem="8te-Cc-NTh" firstAttribute="top" secondItem="HrF-ln-5EK" secondAttribute="bottom" constant="20" id="aRo-d5-Ppv"/>
                             <constraint firstItem="HrF-ln-5EK" firstAttribute="centerX" secondItem="71T-Xi-SS8" secondAttribute="centerX" id="bql-4z-qWg"/>
-                            <constraint firstItem="Wu1-sy-EmM" firstAttribute="centerX" secondItem="71T-Xi-SS8" secondAttribute="centerX" id="fQV-GK-G8x"/>
                             <constraint firstItem="q3Y-2c-joQ" firstAttribute="leading" secondItem="eG3-Dp-DdN" secondAttribute="leading" id="h0V-Q0-hEf"/>
                             <constraint firstItem="HrF-ln-5EK" firstAttribute="top" secondItem="eG3-Dp-DdN" secondAttribute="bottom" constant="20" id="hM7-ku-vPv"/>
                             <constraint firstItem="Wu1-sy-EmM" firstAttribute="top" secondItem="B6D-jB-0qn" secondAttribute="top" constant="50" id="isP-wJ-7kp"/>
                             <constraint firstItem="q3Y-2c-joQ" firstAttribute="top" secondItem="8te-Cc-NTh" secondAttribute="bottom" constant="20" id="kXJ-LK-aeE"/>
-                            <constraint firstItem="B6D-jB-0qn" firstAttribute="trailing" secondItem="Wu1-sy-EmM" secondAttribute="trailing" constant="50" id="kaS-qP-VOx"/>
                             <constraint firstItem="q3Y-2c-joQ" firstAttribute="centerX" secondItem="71T-Xi-SS8" secondAttribute="centerX" id="lhn-no-1yh"/>
                             <constraint firstItem="B6D-jB-0qn" firstAttribute="bottom" secondItem="PoK-CE-Ilk" secondAttribute="bottom" id="si9-DA-P2r"/>
                             <constraint firstItem="B6D-jB-0qn" firstAttribute="trailing" secondItem="PoK-CE-Ilk" secondAttribute="trailing" id="wYK-Ur-hJt"/>
@@ -133,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
