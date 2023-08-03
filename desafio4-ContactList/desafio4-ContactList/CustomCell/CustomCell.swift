@@ -37,6 +37,7 @@ class CustomCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        configImageVIew()
         // Initialization code
     }
     

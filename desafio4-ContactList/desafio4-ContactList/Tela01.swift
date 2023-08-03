@@ -8,6 +8,10 @@
 import UIKit
 
 class Tela01: UIViewController {
+  
+    
+ 
+    
 
     
     @IBOutlet weak var perfilImageView: UIImageView!
@@ -25,6 +29,7 @@ class Tela01: UIViewController {
         configImageView()
         configButton()
         configTexFiel()
+        
     }
 //MARK: Configurações de item da tela
     func configImageView(){
@@ -40,6 +45,9 @@ class Tela01: UIViewController {
     func configButton(){
         addPhotoButton.setTitle("Adicionar Foto", for: .normal)
         saveContactButton.setTitle("Salvar contato", for: .normal)
+        saveContactButton.isEnabled = false
+        saveContactButton.setTitleColor(.black.withAlphaComponent(0.4), for: .disabled)
+        saveContactButton.setTitleColor(.black, for: .normal)
     }
     
     func configTexFiel(){
@@ -48,13 +56,36 @@ class Tela01: UIViewController {
         nameTextField.placeholder  = "Digite o nome"
         NumberTextField.placeholder = "Digite o telefone"
         
+        nameTextField.keyboardType = .default
+        NumberTextField.keyboardType = .decimalPad
+        
+        
     }
     func configTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CustomCell.nib(), forCellReuseIdentifier: CustomCell.identifier)
-        tableView.backgroundColor = UIColor.blue
+        tableView.backgroundColor = UIColor.systemGray5
     }
+    func validateTextField(){
+        if nameTextField.text != "" && NumberTextField.text != ""{
+            
+            saveContactButton.isEnabled = true
+        }else{
+            saveContactButton.isEnabled = false
+        }
+    }
+    
+   
+//    func validateImage(){
+//        if perfilImageView.image == UIImage(systemName: "person") && nameTextField.text != "" && NumberTextField.text != ""{
+//            saveContactButton.isEnabled = false
+//        } else {
+//            saveContactButton.isEnabled = true
+//        }
+//    }
+    
+   
 //MARK: IBaction
     
     @IBAction func tappedAddPhoto(_ sender: Any) {
@@ -66,6 +97,7 @@ class Tela01: UIViewController {
 //    var customCell:CustomCell?
     var data: [(name: String,number: String, image :UIImage)] = []
     @IBAction func tappedSaveContactButton(_ sender: Any) {
+        
         guard let name = nameTextField.text, let number = NumberTextField.text, let image = perfilImageView.image else {return}
         data.append((name,number,image))
         tableView.reloadData()
@@ -74,10 +106,20 @@ class Tela01: UIViewController {
         NumberTextField.text = ""
         perfilImageView.image = .init(systemName: "person")
         view.endEditing(true)
+        
     }
     
+    //MARK: Teste
+     
+     
     
-}
+
+     
+    }
+
+
+    
+
 
 
 //MARK: TableView Delegate
@@ -90,11 +132,13 @@ extension Tela01 : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomCell.identifier, for: indexPath) as? CustomCell
         let item = data[indexPath.row]
-        var configNome:String = "Nome: \(item.name)"
-        var configNumber:String = "Telefone:  \(item.number)"
+        let configNome:String = "Nome: \(item.name)"
+        let configNumber:String = "Telefone:  \(item.number)"
+        cell?.backgroundColor = UIColor.systemGray6
         cell?.recebeNome = configNome
         cell?.recebeNumber = configNumber
         cell?.recebeImage = item.image
+        
         return cell ?? UITableViewCell()
     }
     
@@ -109,17 +153,25 @@ extension Tela01 :UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
     }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        validateTextField()
+       
+    }
+    
 }
 
 //MARK: UIImagePicker
+
 extension Tela01 : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             perfilImageView.image = pickedImage // Define a imagem selecionada na UIImageView.
+            
         }
         
         picker.dismiss(animated: true, completion: nil) // Fecha a galeria após a seleção da imagem.
+        
     }
     // Função que é chamada quando o usuário cancela a seleção de imagem na galeria.
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

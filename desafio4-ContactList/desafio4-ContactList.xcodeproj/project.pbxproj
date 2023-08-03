@@ -17,6 +17,8 @@
 		B19A5FE02A79DE54005C155E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A5FDF2A79DE54005C155E /* TabBarController.swift */; };
 		B19A5FE42A79E5D8005C155E /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19A5FE22A79E5D8005C155E /* CustomCell.swift */; };
 		B19A5FE52A79E5D8005C155E /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19A5FE32A79E5D8005C155E /* CustomCell.xib */; };
+		B1E5D78A2A7A9CE3003E7035 /* ContactListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1E5D7882A7A9CE3003E7035 /* ContactListCell.xib */; };
+		B1E5D78B2A7A9CE3003E7035 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E5D7892A7A9CE3003E7035 /* ContactListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B19A5FDF2A79DE54005C155E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B19A5FE22A79E5D8005C155E /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		B19A5FE32A79E5D8005C155E /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		B1E5D7882A7A9CE3003E7035 /* ContactListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactListCell.xib; sourceTree = "<group>"; };
+		B1E5D7892A7A9CE3003E7035 /* ContactListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		B19A5FC82A79DC0E005C155E /* desafio4-ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				B19A60062A7A9C67005C155E /* ContactListCell */,
 				B19A5FE12A79E5A9005C155E /* CustomCell */,
 				B19A5FC92A79DC0E005C155E /* AppDelegate.swift */,
 				B19A5FCB2A79DC0E005C155E /* SceneDelegate.swift */,
@@ -85,6 +90,15 @@
 				B19A5FE32A79E5D8005C155E /* CustomCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		B19A60062A7A9C67005C155E /* ContactListCell */ = {
+			isa = PBXGroup;
+			children = (
+				B1E5D7892A7A9CE3003E7035 /* ContactListCell.swift */,
+				B1E5D7882A7A9CE3003E7035 /* ContactListCell.xib */,
+			);
+			path = ContactListCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E5D78A2A7A9CE3003E7035 /* ContactListCell.xib in Resources */,
 				B19A5FD62A79DC13005C155E /* LaunchScreen.storyboard in Resources */,
 				B19A5FD32A79DC13005C155E /* Assets.xcassets in Resources */,
 				B19A5FE52A79E5D8005C155E /* CustomCell.xib in Resources */,
@@ -162,6 +177,7 @@
 				B19A5FCE2A79DC0E005C155E /* Tela01.swift in Sources */,
 				B19A5FCA2A79DC0E005C155E /* AppDelegate.swift in Sources */,
 				B19A5FCC2A79DC0E005C155E /* SceneDelegate.swift in Sources */,
+				B1E5D78B2A7A9CE3003E7035 /* ContactListCell.swift in Sources */,
 				B19A5FE02A79DE54005C155E /* TabBarController.swift in Sources */,
 				B19A5FE42A79E5D8005C155E /* CustomCell.swift in Sources */,
 				B19A5FDE2A79DD0B005C155E /* Tela02.swift in Sources */,

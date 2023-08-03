@@ -15,10 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="mf2-0i-kpg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIX-9R-7Sf">
+                                <rect key="frame" x="20" y="99" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-5D-nhX">
+                                <rect key="frame" x="0.0" y="173" width="393" height="596"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HD2-eU-Unj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TIX-9R-7Sf" firstAttribute="top" secondItem="HD2-eU-Unj" secondAttribute="top" constant="40" id="37m-Q3-qnJ"/>
+                            <constraint firstItem="hh8-5D-nhX" firstAttribute="leading" secondItem="HD2-eU-Unj" secondAttribute="leading" id="R1v-20-ldM"/>
+                            <constraint firstItem="hh8-5D-nhX" firstAttribute="top" secondItem="TIX-9R-7Sf" secondAttribute="bottom" constant="40" id="S1c-Q2-XMa"/>
+                            <constraint firstItem="TIX-9R-7Sf" firstAttribute="centerX" secondItem="mf2-0i-kpg" secondAttribute="centerX" id="VgC-eJ-TiK"/>
+                            <constraint firstItem="TIX-9R-7Sf" firstAttribute="leading" secondItem="HD2-eU-Unj" secondAttribute="leading" constant="20" id="ddQ-PY-Cpu"/>
+                            <constraint firstItem="HD2-eU-Unj" firstAttribute="trailing" secondItem="hh8-5D-nhX" secondAttribute="trailing" id="r7p-KB-pnC"/>
+                            <constraint firstItem="HD2-eU-Unj" firstAttribute="bottom" secondItem="hh8-5D-nhX" secondAttribute="bottom" id="sXb-gb-Bde"/>
+                            <constraint firstItem="HD2-eU-Unj" firstAttribute="trailing" secondItem="TIX-9R-7Sf" secondAttribute="trailing" constant="20" id="tki-UD-rtF"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="gHz-Qg-nvE"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="TIX-9R-7Sf" id="B4x-Gp-Gac"/>
+                        <outlet property="tableView" destination="hh8-5D-nhX" id="Krg-65-8jj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KD-Zm-svY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
